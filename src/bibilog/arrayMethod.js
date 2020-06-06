@@ -36,3 +36,38 @@ var arr2 = arr
     return n * 2;
   });
 console.log(arr2); //[ 30, 790, 800, 6000 ]
+
+var arr = [4, 377, 1024];
+var arr2 = arr
+  .filter(function (n) {
+    return n % 5 == 0;
+  })
+  .map(function (n) {
+    return n * 2;
+  });
+
+console.log(arr2);
+
+//find
+// 정수 배열에서 5의 배수인 정수 '하나' 찾기
+var arr = [4, 15, 377, 395, 400, 1024, 3000];
+var arr2 = arr.find(function (n) {
+  return n % 5 == 0;
+});
+console.log(arr2);
+
+// 정수 배열에서 5의 배수인 정수 '하나' 찾기
+var arr = [4, 15, 377, 395, 400, 1024, 3000];
+var count = 0;
+var arr2 = arr.find(function (n) {
+  count++;
+  return n % 5 == 0;
+});
+console.log(count);
+
+// 정수 배열에서 5의 배수인 정수만 모으기
+var arr = [4, 377, 1024];
+var arr2 = arr.find(function (n) {
+  return n % 5 == 0;
+});
+console.log(arr2); //undefined
