@@ -138,8 +138,11 @@ var arr = [
 var arr2 = null;
 
 // 여기에 코드를 작성하여 아래 조건을 만족 시키세요.
+var arr2 = arr.map(function (obj) {
+  return { x1: obj.x1, x2: obj.x2, result: obj.x1 * obj.x2 };
+});
 
-/**
+/*
 1. arr은 변경되면 안됩니다:
 [
   {x1: 1, x2: 1},
