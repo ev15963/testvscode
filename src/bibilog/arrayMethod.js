@@ -88,3 +88,73 @@ var sum = arr.reduce(function (pre, value) {
 }, 0); // initialValue가 주어졌다!
 console.log(sum); // 31
 console.log(count); // 5
+
+//map-문자열 배열에서 문자영 길이만 획득하기 reduce로 표현
+var arr = ['foo', 'hello', 'diamond', 'A'];
+var arr2 = arr.reduce(function (pre, value) {
+  pre.push(value.length);
+  return pre;
+}, []);
+console.log(arr2); // [3,5,7,1]
+
+//filter - 정수 배열에서 5의 배수인 정수만 모으기 reduce로 표현
+var arr = [4, 15, 377, 395, 400, 1024, 3000];
+var arr2 = arr.reduce(function (pre, value) {
+  if (value % 5 == 0) {
+    pre.push(value);
+  }
+  return pre;
+}, []);
+console.log(arr2);
+
+// find - 정수 배열에서 5의 배수인 정수 '하나' 찾기 reduce로 표현
+var arr = [4, 15, 377, 395, 400, 1024, 3000];
+var arr2 = arr.reduce(function (pre, value) {
+  if (typeof pre == 'undefined' && value % 5 == 0) {
+    pre = value;
+  }
+  return pre;
+}, undefined);
+console.log(arr2);
+
+//Object.keys
+var obj = {
+  apple: 500,
+  grape: 2000,
+  berry: 30,
+};
+
+var sum = Object.keys(obj).reduce(function (pre, value) {
+  return pre + obj[value];
+}, 0);
+console.log(sum);
+
+//문제
+var arr = [
+  { x1: 1, x2: 1 },
+  { x1: 2, x2: 2 },
+  { x1: 3, x2: 3 },
+];
+var arr2 = null;
+
+// 여기에 코드를 작성하여 아래 조건을 만족 시키세요.
+
+/**
+1. arr은 변경되면 안됩니다:
+[
+  {x1: 1, x2: 1},
+  {x1: 2, x2: 2},
+  {x1: 3, x2: 3}
+]
+*/
+console.log(arr);
+
+/**
+2. arr2는 다음과 같아야 합니다:
+[
+  {x1: 1, x2: 1, result: 1},
+  {x1: 2, x2: 2, result: 4},
+  {x1: 3, x2: 3, result: 9}
+]
+*/
+console.log(arr2);
