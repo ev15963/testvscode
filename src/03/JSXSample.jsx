@@ -5,7 +5,7 @@ class App extends React.Component {
     return (
       //아래는 JSX양식
       <div>
-        <img src="http://www.easyspub.co.kr/images/logo_footer.png" />
+        <img src="https://www.easyspub.co.kr/images/logo_footer.png" />
         <div>안녕하세요</div>
       </div>
     );
