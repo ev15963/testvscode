@@ -4,6 +4,7 @@ import React from 'react';
 // import PropsComponent from './03/PropsCompnent';
 // import ChildComponent from './03/ChildComponent';
 import BooleanComponent from './03/BooleanComponent';
+// import ChildComponent from './03/ChildComponent';
 
 class App extends React.Component {
   render() {
