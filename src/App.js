@@ -3,21 +3,15 @@ import React from 'react';
 // import TodaysPlan from './03/TodaysPlan';
 // import PropsComponent from './03/PropsCompnent';
 // import ChildComponent from './03/ChildComponent';
-import BooleanComponent from './03/BooleanComponent';
-// import ChildComponent from './03/ChildComponent';
+// import BooleanComponent from './03/BooleanComponent';
+// import ChildComponent2 from './03/ChildComponent2';
+import DefaultPropsComponent from './03/DefaultPropsComponent';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <b>지루할 때 : </b> {/*이름만 전달하기*/}
-          <BooleanComponent bored />
-        </div>
-        <div>
-          <b>즐거울 때 : </b> {/** 이름 전달하지 않을때 */}
-          <BooleanComponent />
-        </div>
+        <DefaultPropsComponent />
       </div>
     );
   }
