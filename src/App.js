@@ -8,13 +8,14 @@ import React from 'react';
 // import DefaultPropsComponent from './03/DefaultPropsComponent';
 // import ChildProperty from './03/ChildProperty';
 // import StateExample from './03/StateExample';
-import ForceUpdataExample from './03/ForceUpdataExample';
+// import ForceUpdataExample from './03/ForceUpdataExample';
+import Counter from './03/Counter';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <ForceUpdataExample />
+        <Counter />
       </div>
     );
   }
