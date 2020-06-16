@@ -1,14 +1,17 @@
 import React from 'react';
 
-class App extends React.Component {
-  render() {
-    return (
-      //아래는 JSX양식
-      <div>
-        <img src="https://www.easyspub.co.kr/images/logo_footer.png" />
-        <div>안녕하세요</div>
-      </div>
-    );
+class JSXSample extends React.Component {
+  static getDerivedStateFromProps() {
+    console.log('getDerivedStateFromProps 호출');
+    return {};
+  }
+  constructor(props) {
+    super(props);
+    //getDerivedStateFromProps() 함수를 사용하므로
+    //경고 메시지를 건너 뛰기 위해 state 초깃값을 설정합니다.
+    this.state = {};
+    console.log('constructor 호출');
   }
 }
-export default App;
+
+export default JSXSample;
