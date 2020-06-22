@@ -1,6 +1,17 @@
 import React from 'react';
 
 class LifecycleExample extends React.Component {
+  static getDeirvedStateFromProps() {
+    console.log('getDeriedStateFromProps 호출');
+  }
+
+  constructor() {
+    super(props);
+    this.state = {};
+    console.log('constructor 호출');
+  }
+
+  ///////////
   render() {
     return (
       //아래는 JSX양식
