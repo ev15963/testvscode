@@ -14,14 +14,19 @@ class LifecycleExample extends React.Component {
   }
   componentDidMount() {
     console.log('componentDidMount 호출');
+    this.setState({ updated: true });
   }
   componentDidUpdate() {
     console.log('componentDidUpdate 호출');
   }
   componentWillUnmount() {
-    console.log('getSnapshotBeforeUpdate 호출');
+    console.log('componentWillUnmount 호출');
   }
   getSnapshotBeforeUpdate() {
+    console.log('getSnapshotBeforeUpdate 호출');
+    return {};
+  }
+  shouldComponentUpdate() {
     console.log('shouldComponentUpdate 호출');
     return true;
   }
