@@ -1,25 +1,34 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class LifecycleExample extends React.Component {
   static getDeirvedStateFromProps() {
     console.log('getDeriedStateFromProps 호출');
+    return {};
   }
 
-  constructor() {
+  constructor(props) {
     super(props);
     this.state = {};
     console.log('constructor 호출');
   }
-
-  ///////////
+  componentDidMount() {
+    console.log('componentDidMount 호출');
+  }
+  componentDidUpdate() {
+    console.log('componentDidUpdate 호출');
+  }
+  componentWillUnmount() {
+    console.log('getSnapshotBeforeUpdate 호출');
+  }
+  getSnapshotBeforeUpdate() {
+    console.log('shouldComponentUpdate 호출');
+    return true;
+  }
   render() {
-    return (
-      //아래는 JSX양식
-      <div>
-        <img src="https://www.easyspub.co.kr/images/logo_footer.png" />
-        <div>안녕하세요</div>
-      </div>
-    );
+    console.log('render 호출');
+    return null;
   }
 }
+
 export default LifecycleExample;

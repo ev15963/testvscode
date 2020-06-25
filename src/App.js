@@ -9,13 +9,14 @@ import React from 'react';
 // import ChildProperty from './03/ChildProperty';
 // import StateExample from './03/StateExample';
 // import ForceUpdataExample from './03/ForceUpdataExample';
-import Counter from './03/Counter';
+// import Counter from './03/Counter';
+import LifecycleExample from './03/LifecycleExample';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Counter />
+        <LifecycleExample />
       </div>
     );
   }
