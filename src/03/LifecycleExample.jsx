@@ -28,7 +28,7 @@ class LifecycleExample extends React.Component {
   }
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate 호출');
-    return true;
+    return false; //true에서 false로 강제 수정
   }
   render() {
     console.log('render 호출');
