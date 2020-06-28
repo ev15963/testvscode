@@ -27,3 +27,7 @@ serviceWorker.unregister();
 
 //var root = document.getElementById('root');
 //root.append(welcomeEl);
+/*
+require('@babel/register');
+require('src');
+*/
