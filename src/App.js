@@ -11,30 +11,22 @@ import React from 'react';
 // import ForceUpdataExample from './03/ForceUpdataExample';
 // import Counter from './03/Counter';
 // import LifecycleExample from './03/LifecycleExample';
-import Counter from './03/Counter';
-import NewCounter from './03/NewCounter';
+// import Counter from './03/Counter';
+// import NewCounter from './03/NewCounter';
+import Counter from './03/Counter2';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 10 };
-    this.resetCount = this.resetCount.bind(this);
+    this.state = {
+      count: 1,
+    };
   }
-  resetCount() {
-    this.setState(({ count }) => ({ count: count + 10 }));
+  increaseCount() {
+    this.setState(({ count }) => ({ count: count + 1 }));
   }
   render() {
-    return (
-      <div>
-        <div>
-          <Counter count={this.state.count} />
-        </div>
-        <div>
-          <NewCounter count={this.state.count} />
-        </div>
-        <button onClick={this.resetCount}>{this.state.count + 10}으로 초기화</button>
-      </div>
-    );
+    return <Counter count={this.state.count} onAdd={this.increaseCount} />;
   }
 }
 export default App;
