@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState(({ count }) => ({ count: count + 1 }));
   }
   render() {
-    return <Counter count={this.state.count} onAdd={this.increaseCount} />;
+    return <Counter count={this.state.count} onAdd={this.increaseCount.bind(this)} />; //bind 함수는 constructor()함수에 모아두면 매번 render() 함수를 호출할 때마다 새로작성 안해도 된다.
   }
 }
 export default App;
