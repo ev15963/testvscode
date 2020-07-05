@@ -23,7 +23,6 @@ class Counter3 extends React.Component {
           onClick={this.this.increateCount} //버튼이 클릭될 떄 카운트를 증가하는 함수를 호출합니다.
           onMouseOut={this.resetCount}
         >
-          {' '}
           {/**마우스가 버튼 밖으로 이동하면 카운트를 초기화하는 함수를 호출합니다. */}
           카운트증가
         </button>
