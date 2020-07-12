@@ -11,7 +11,25 @@ export default from '../storybook';
 //리액트 엔진이 화면을 출력하는 코드
 //id가 root인 엘리먼트에 컴포넌트를 출력
 ReactDOM.render(<App />, document.getElementById('root'));
+import { AppRegistry } from 'react-native';
+import { getStorybookUI, configure } from '@storybook/react-native';
 
+import './rn-addons';
+
+// import stories
+configure(() => {
+  require('./stories');
+}, module);
+
+// Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
+// To find allowed options for getStorybookUI
+const StorybookUIRoot = getStorybookUI({});
+
+// If you are using React Native vanilla write your app name here.
+// If you use Expo you can safely remove this line.
+AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIRoot);
+
+export default StorybookUIRoot;
 //아래 부분은 서비스워커 구동 코드로 오프라인 모드로 작동하는 데 도움이 되는 모듈입니다.
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
