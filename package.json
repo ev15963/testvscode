@@ -27,11 +27,12 @@
     "shallow-equal": "^1.2.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .stroybook",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,5 +63,13 @@
     "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^7.1.0",
     "storybook-addon-jsx": "^7.1.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0"
   }
 }
