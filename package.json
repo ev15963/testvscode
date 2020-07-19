@@ -36,7 +36,7 @@
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .stroybook",
     "start": "webpack-dev-server --mode development",
-    "build": "react-scripts build",
+    "build": "babel src -d lib",
     "test": "(eslint lib || true) && jest",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook"
