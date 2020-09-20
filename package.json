@@ -78,6 +78,8 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "@storybook/react-native-server": "^5.3.19",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "webpack": "^3.8.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
