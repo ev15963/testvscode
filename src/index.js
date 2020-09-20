@@ -12,7 +12,7 @@ export default from '../storybook';
 //id가 root인 엘리먼트에 컴포넌트를 출력
 ReactDOM.render(<App />, document.getElementById('root'));
 import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure } from '@storybook/react-native';
+import { getStorybookUI, configure } from './stories/node_modules/@storybook/react-native';
 
 import './rn-addons';
 
