@@ -36,14 +36,14 @@ class Input extends PureComponent {
       <label>
         {label} {/**autoFocus값이 true일 경우 출력 후 input 박스에 자동으로 커서를 배치 */}
         <input
-          id={'input_${name}'}
+          id={`input_${name}`}
           ref={this.setRef}
           onChange={this.handleChange} /**label 안에 전달받은 label겂을 출력 */
           onFocus={onFocus} /**input 값이 변경될 때 onChange 콜백 함수를 호출*/
           value={value}
           type={type}
         />
-        {errorMessage && <span className="error">{errorMessage}</span>}{' '}
+        {errorMessage && <span className="error">{errorMessage}</span>}
         {/**프로퍼티로 전달받은 콜백 함수를 DOM 이벤트 프로퍼티에 연결하여 input에 마우스 커서가 포커스될 때 상위 컴포넌트의 콜백 함수를 호출*/}
       </label>
     );
