@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 //작성한 컴포넌트 소환
 // import TodaysPlan from './03/TodaysPlan';
 // import PropsComponent from './03/PropsCompnent';
@@ -13,20 +13,23 @@ import React from 'react';
 // import LifecycleExample from './03/LifecycleExample';
 // import Counter from './03/Counter';
 // import NewCounter from './03/NewCounter';
-import Counter from './03/Counter2';
+// import Counter from './03/Counter2';
+import './materialize.css';
+import './sass/materialize.scss';
+import './App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 1,
-    };
-  }
-  increaseCount() {
-    this.setState(({ count }) => ({ count: count + 1 }));
-  }
+class App extends Component {
   render() {
-    return <Counter count={this.state.count} onAdd={this.increaseCount.bind(this)} />; //bind 함수는 constructor()함수에 모아두면 매번 render() 함수를 호출할 때마다 새로작성 안해도 된다.
+    return (
+      <div>
+        <nav>
+          <div className="nav-wrapper">
+            <div>두잇! 리액트 시작하기</div>
+          </div>
+        </nav>
+        <h1>머티리얼 CSS</h1>
+      </div>
+    );
   }
 }
 export default App;

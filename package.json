@@ -78,6 +78,7 @@
     "@storybook/addons": "5.2.6",
     "@storybook/react": "5.2.6",
     "babel-loader": "^8.1.0",
+    "node-sass": "^4.14.1",
     "storybook-addon-jsx": "^7.3.4",
     "webpack": "^3.8.0",
     "webpack-dev-server": "^2.9.7"
