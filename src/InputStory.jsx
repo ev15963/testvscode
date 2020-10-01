@@ -1,5 +1,5 @@
 import React from 'react';
-import { stroiesOf } from '@stroybook.react';
+import { stroiesOf } from '@storybook.react';
 
 import Input from '../03/Input';
 
