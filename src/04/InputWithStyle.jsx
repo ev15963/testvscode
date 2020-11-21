@@ -36,7 +36,7 @@ class Input extends PureComponent {
       <div className="input-field">
         <input
           id={`input_${name}`}
-          className="validate"
+          className={`validate ${errorMessage && 'invalid'}`}
           ref={this.setRef}
           onChange={this.handleChange} /**label 안에 전달받은 label겂을 출력 */
           value={value}
@@ -45,7 +45,7 @@ class Input extends PureComponent {
         <label htmlFor={`input_${name}`}>
           {label}
         </label>
-        {errorMessage && <span className="helper-text">{errorMessage}</span>}
+        {errorMessage && <span className="helper-text">data-error={errorMessage}</span>}
         {/**프로퍼티로 전달받은 콜백 함수를 DOM 이벤트 프로퍼티에 연결하여 input에 마우스 커서가 포커스될 때 상위 컴포넌트의 콜백 함수를 호출*/}
         </div>
     );
